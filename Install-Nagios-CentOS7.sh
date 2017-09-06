@@ -40,7 +40,11 @@ sudo make install-config
 
 sudo make install-webconf
 
-vi /usr/local/nagios/etc/objects/contacts.cfg
+#vi /usr/local/nagios/etc/objects/contacts.cfg
+
+clear
+
+echo "NHAP MAT KHAU CHO ADMIN NAGIOS"
 
 sudo htpasswd -s -c /usr/local/nagios/etc/htpasswd.users nagiosadmin
 
