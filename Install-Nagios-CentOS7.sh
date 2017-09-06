@@ -78,3 +78,5 @@ sudo systemctl start nagios.service
 
 sudo rm -frv /tmp/nagios*
 
+echo "CAI DAT NAGIOS CORE DA HOAN TAT"
+echo ""
