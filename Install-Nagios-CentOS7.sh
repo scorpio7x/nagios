@@ -78,5 +78,9 @@ sudo systemctl start nagios.service
 
 sudo rm -frv /tmp/nagios*
 
+clear
 echo "CAI DAT NAGIOS CORE DA HOAN TAT"
+echo
 echo "DIA CHI DANG NHAP: http://$(ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1  -d'/')/nagios"
+
+
