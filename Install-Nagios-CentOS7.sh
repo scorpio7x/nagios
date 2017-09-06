@@ -44,7 +44,7 @@ sudo make install-webconf
 
 clear
 
-echo "NHAP MAT KHAU CHO ADMIN NAGIOS"
+echo "THIET LAP MAT KHAU CHO ADMIN NAGIOS"
 
 sudo htpasswd -s -c /usr/local/nagios/etc/htpasswd.users nagiosadmin
 
