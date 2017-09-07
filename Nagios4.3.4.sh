@@ -14,6 +14,10 @@ sudo groupadd nagcmd
 
 sudo usermod -a -G nagcmd nagios
 
+sudo usermod -a -G nagcmd apache
+
+setenforce 0
+
 tar -xvf nagios-4.3.4.tar.gzip
 
 tar -xvf nagios-plugins-2.2.1.tar.gzip
@@ -33,6 +37,10 @@ sudo make install-commandmode
 sudo make install-config
 
 sudo make install-webconf
+
+chown nagios:nagcmd /usr/local/nagios/var/rw
+
+chown nagios:nagcmd /usr/local/nagios/var/rw/nagios.cmd
 
 clear
 
@@ -68,8 +76,6 @@ sudo systemctl enable httpd
 
 sudo systemctl start nagios.service
 
-setenforce 0
-
 sudo rm -frv /tmp/nagios*
 
 clear
@@ -81,6 +87,7 @@ echo "ACCOUNT LOGIN: nagiosadmin"
 echo
 echo "PASSWORD BAN DA THIET LAP TRUOC DO"
 echo
+
 
 
 
